@@ -56,20 +56,22 @@ Solusi yang bisa dilakukan agar goals dapat terpenuhi sebagai berikut :
   - Support Vector Machine (Support Vector Regression)
   - Boosting Algorithm (Gradient Boosting Regression)
 
-* Seletah semua dilalui kita bisa menambahkan Hyperparameter tuning agar model dapat berjalan dalam performa terbaiknya.
+* Seletah semua dilalui kita bisa menambahkan Hyperparameter tuning menggunakan teknik Grid Search agar model dapat berjalan dalam performa terbaik dan mendapatkan hasil yang terbaik pula.
 
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
+Pada proyek ini saya mengambil dataset publik dari Kaggle yang berjudul Dataset Saham Indonesia / Indonesia Stock Dataset didalam dataset tersebut saya mengambil pada folder /daily/BBNI.csv (https://www.kaggle.com/datasets/muamkh/ihsgstockdata/code).
 
-Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
+Dataset yang digunakan memiliki format .csv, mempunyai total 4431 data dengan 7 kolom diantaranya (Date, Open, High, Low, Close, Adj Close dan Volume), berikut merupakan penjelasan masing masing kolom:
+- **timestamp**: tanggal mulai dari open, low, high, close dan volume
+- **open** : opening price per day
+- **low** : Lowest price per day
+- **high** : Highest price per day
+- **close** : Closing price per day
+- **volume** : Volume Transaction price per day
 
-### Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+### Eksploratory Data Analysis
+Berikut adalah data seperti korelasi, outliner, dan analisis Univariate dan Multivariate anailisis
+- Menangani Outliner
 
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
