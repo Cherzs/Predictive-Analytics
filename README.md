@@ -59,7 +59,8 @@ Solusi yang bisa dilakukan agar goals dapat terpenuhi sebagai berikut :
 * Seletah semua dilalui kita bisa menambahkan Hyperparameter tuning menggunakan teknik Grid Search agar model dapat berjalan dalam performa terbaik dan mendapatkan hasil yang terbaik pula.
 
 ## Data Understanding
-Pada proyek ini saya mengambil dataset publik dari Kaggle yang berjudul Dataset Saham Indonesia / Indonesia Stock Dataset didalam dataset tersebut saya mengambil pada folder /daily/BBNI.csv (https://www.kaggle.com/datasets/muamkh/ihsgstockdata/code).
+Pada proyek ini saya mengambil dataset publik dari Kaggle yang berjudul Dataset Saham Indonesia / Indonesia Stock Dataset didalam dataset tersebut saya mengambil pada folder /daily/BBNI.csv 
+(https://www.kaggle.com/datasets/muamkh/ihsgstockdata/code).
 
 Dataset yang digunakan memiliki format .csv, mempunyai total 4431 data dengan 7 kolom diantaranya (Date, Open, High, Low, Close, Adj Close dan Volume), berikut merupakan penjelasan masing masing kolom:
 - **timestamp**: tanggal mulai dari open, low, high, close dan volume
@@ -73,21 +74,26 @@ Dataset yang digunakan memiliki format .csv, mempunyai total 4431 data dengan 7 
 Berikut adalah data seperti korelasi, outliner, dan analisis Univariate dan Multivariate anailisis
 - Menangani Outliner
 Dibawah ini adalah visualisasi dari data numerik yang menampilkan outliner hanya pada fitur ***volume***.
+
 ![outliner_before](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/before%20Outliner.png)
 Untuk menangani outlier dengan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR yaitu antara **25%** dan **75%**. Sampel data yang sudah clean adalah (4444, 5).
 Berikut proses penanganan outliner
+
 ![outliner_after](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/after%20Outliner.png)
 
 - Unvariate Analysis
 Kita fokus pada kolom close
+
 ![unvariate](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/U.png)
 
 - Multivariate Analysis
 Berikut adalah hasil dari multivariate analisis. Bisa kita lihat pada kolom Close dengan kolom lainya, bisa disimpulkan bahwa close memiliki korelasi yang cukup kuat terhadap kolom**High, Open, Low, dan Close**. Sementara Close terhadap kolom **Volume** memiliki korelasi yang kurang kuat. 
+
 ![multivariate](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/M.png)
 
 - Korelasi Heatmap
-Untuk memperjelas korelasi kita menggunakan heatmap dengan menggunakan library Seaborn. Disini kolom Close memiliki korelasi positif yang kuat terhadap setiap fitur yang ditandakan dengan angka **1** yang berarti kuat dan bisa kita gunakan sebagai _Dependent variable_ terkecuali pada fitur **Volume**.
+Untuk memperjelas korelasi kita menggunakan heatmap dengan menggunakan library Seaborn. Disini kolom Close memiliki korelasi positif yang kuat terhadap setiap fitur yang ditandakan dengan angka **1** yang berarti kuat dan bisa kita gunakan sebagai Dependent variable terkecuali pada fitur **Volume**.
+
 ![heatmap](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/Heatm.png)
 
 ## Data Preparation
