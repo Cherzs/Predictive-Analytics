@@ -2,42 +2,61 @@
 
 ## Domain Proyek
 
-Pada bagian ini, kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
+Saya memilih domain Ekonomi dan bisnis untuk proyek kali ini dengan judul **Predictive Analytics of Bank BNI(BBNI) stock**
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-  
-  Format Referensi: [Judul Referensi](https://scholar.google.com/) 
+### Latar Belakang
+Investasi Saham adalah salah satu investasi yang dipilih oleh
+seseorang untuk menginvestasikan kekayaannya selain asset rill yang
+berupa emas, berlian ataupun tanah. Saham merupakan surat berharga yang
+menunjukkan bukti kepemilikan invidu maupun institusi dalam suatu
+perusahaan. Seorang investor dapat memilih jenis investasi ini karena dapat
+memberikan keuntungan ekonomis dan non ekonomis bagi pemegang
+saham.
 
+Sejalan dengan berkembangnya perekonomian, banyak perusahaan
+yang melakukan ekspansi usaha. Untuk tujuan tersebut maka perusahaan
+memerlukan dana yang relatif besar. Untuk memenuhi kebutuhan dana
+tersebut tentunya diperlukan usaha untuk mencari tambahan dana untuk di
+suntikkan ke dalam perusahaan sebagai pengganti ataupun sebagai
+penambah dana yang sedang dijalankan ataupun untuk pengembangan dan
+perluasan bidang usaha. Salah satu aspek yang di nilai oleh masyarakat
+dalam ivestasi adalah kinerja keuangan perusahaan yang diukur dari laporan
+keuangan perusahaan. Oleh karena itu perusahaan akan selalu
+mempublikasikan laporan keuangannya agar para calon investor dapat
+mengetahui bagaimana kinerja dan prospek perusahaan tersebut ke depan. Namun dengan untuk kemudahan investor ini maka saya membuat Predictive Analytics of Bank BNI(BBNI) stock yang akan membantu investor yang baru terjun kedalam dunia saham untuk menjadi patokan berinvestasi dengan menggunakan Machine Learning secara berkelanjutan atau Time Series Forecasting/Regression
+
+Metode Forecasting adalah salah satu metode untuk melakukan perencanaan serta pengendalian produksi dalam dunia akuntansi. Selain itu, forecasting juga didefinisikan sebagai alat bantu untuk melakukan perencanaan yang efektif dan efisien. Dalam Machine Learning Forecasting adalah bagian dari teknik yang dapat digunakan untuk mengkalkulasi apa yang akan terjadi dalam 1 bulan kedepan bahkan beberapa tahun kedepan
 ## Business Understanding
-
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
-
 ### Problem Statements
-
-Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+Berikut permasalahan yang didapat da:
+- Apakah Predictive analytics ini bisa menjadi acuan untuk investasi, kemudian bagaimana cara analisis harga dari Bank BNI(BBNI)?
+- Bagaimana memilih algoritma yang sesuai dan melatih model untuk hasil yang terbaik untuk data ini?
+- Bagaimana menganalisis dan memprediksi harga pada Bank BNI(BBNI) menggunakan teknik Forecasting dalam Time Series?
+- Apakah hanya Bank BNI(BBNI) yang dapat diprediksi dalam kasus ini?
 
 ### Goals
 
-Menjelaskan tujuan dari pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
+Tujuan:
+- Predictive analytics ini dapat menjadi acuan untuk para investor yang baru maupun yang sudah bisa menguasai teknikal anilisis.
+- Dengan melakukan training model pada beberapa algoritma yang digunakan dan kita akan mendapat hasil dan kemudian memilih yang terbaik
+- Setelah mendapatkan hasil Training yang diinginkan, maka kita bisa menerapkannya pada Bank BNI yang akan kita investasikan dan memliki acuan untuk berinvestasi pada perusahaan tersebut.
+- Bukan hanya Bank BNI(BBNI), semua bank/perusahaan bisa kita analisis dan prediksikan jika kita ingin menganalisis market yang ada di dunia ataupun di dalam region kita.
 
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
+### Solution statements
+Solusi yang bisa dilakukan agar goals dapat terpenuhi sebagai berikut :
+* Melakukan analisa dan eksplorasi lebih jauh pada dataset kemudian memvisualisasikanya agar mendapat gambaran/hasil yang kuat. Berikut merupakan tahapan yang bisa mewakili solution statement:
+  - Menangani missing value/data hilang pada dataset yang digunakan.
+  - Jika terdapat outliner kita dapat menganganinya dengan metode IQR dimana outliner yang ada akan hilang.
+  - Melakukan Normalization pada dataset sehingga dipastikan bahwa dataset yang kita gunakan berkualitas baik.
+  - Membuat model regresi untuk prediksi bilangan kontinua pada saham.
 
-    ### Solution statements
-    - Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
-    - Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
+* Berikut merupakan list algortima yang dicoba dalam model:
+  - K-Nearest Neighbors (KNN)
+  - Support Vector Machine (Support Vector Regression)
+  - Boosting Algorithm (Gradient Boosting Regression)
+
+* Seletah semua dilalui kita bisa menambahkan Hyperparameter tuning agar model dapat berjalan dalam performa terbaiknya.
 
 ## Data Understanding
 Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
