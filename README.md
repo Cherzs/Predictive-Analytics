@@ -105,4 +105,55 @@ Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, probl
 _Catatan:_
 - _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
 - Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
+berikut merupakan Visualisai dari hasil akurasi model :
+|index|train\_mse|test\_mse|
+|---|---|---|
+|SVR|20\.238573880982816|55\.52692278397914|
+|KNN|16\.68136160714286|51\.30848214285714|
+|GradientBoosting|9\.669640985095231|36\.33649890753796|
 
+akurasi model mse
+|index|Accuracy \(%\)|
+|---|---|
+|SVR|99\.61126168219803|
+|KNN|99\.64079455447617|
+|Gradient Boost|99\.74561188065324|
+
+Forecasting
+|index|close|Forecast|
+|---|---|---|
+|2022-09-26 00:00:00|264\.0|NaN|
+|2022-09-27 00:00:00|262\.0|NaN|
+|2022-09-28 00:00:00|264\.0|NaN|
+|2022-09-29 00:00:00|260\.0|NaN|
+|2022-09-30 00:00:00|256\.0|NaN|
+|0|NaN|847\.0|
+|1|NaN|847\.0|
+|2|NaN|847\.0|
+|3|NaN|847\.0|
+|4|NaN|847\.0|
+|5|NaN|847\.0|
+|6|NaN|847\.0|
+|7|NaN|847\.0|
+|8|NaN|847\.0|
+|9|NaN|847\.0|
+|10|NaN|847\.0|
+|11|NaN|847\.0|
+|12|NaN|847\.0|
+|13|NaN|847\.0|
+|14|NaN|847\.0|
+|15|NaN|847\.0|
+|16|NaN|847\.0|
+|17|NaN|847\.0|
+|18|NaN|847\.0|
+|19|NaN|847\.0|
+|20|NaN|847\.0|
+|21|NaN|847\.0|
+|22|NaN|847\.0|
+|23|NaN|847\.0|
+|24|NaN|848\.6666666666666|
+|25|NaN|847\.0|
+|26|NaN|847\.0|
+|27|NaN|847\.0|
+|28|NaN|847\.0|
+|29|NaN|847\.0|
