@@ -163,9 +163,9 @@ Pada tahap evaluasi ini metrik yang digunakan adalah Mean Squared Error (MSE), d
 ![mse_rumus](https://github.com/Cherzs/Predictive-Analytics/blob/87300f46f089ad222576eb4e58c1fe4299137b79/Image/Rumus%20MSE.jpg)
 
 Perhitungan dari MSE dimana penjelasan dari variablenya:
-Y ' = Nilai Prediksi 
-Y   = Nilai Sebenarnya
-n   = Jumlah Data
+- Y ' = Nilai Prediksi 
+- Y   = Nilai Sebenarnya
+- n   = Jumlah Data
 
 Berikut hasil dari MSE model, dimana semakin kecil MSE yang diperoleh oleh model maka akan semakin optimal algortima yang digunakan.
 
@@ -176,12 +176,12 @@ Berikut hasil dari MSE model, dimana semakin kecil MSE yang diperoleh oleh model
 |GradientBoosting|9\.669640985095231|36\.33649890753796|
 
 Plot Visualisasi MSE pada model
-kita bisa melihat hasil plot dari model terhadap beberapa algortma yang digunakan, ada 2 algoritma yang sangat cocok untuk gunakan diantaranya ada KNN dan Gradient Boosting.
+Berikut hasil plot dari model terhadap beberapa algoritma yang digunakan, terlihat algoritma yang sangat cocok untuk digunakan adalah Gradient Boosting.
 
 ![mse_plot](https://github.com/Cherzs/Predictive-Analytics/blob/87300f46f089ad222576eb4e58c1fe4299137b79/Image/MSE.png)
 
 Hasil akurasi MSE model
-Kita bisa melihat akurasi dari setiap algortima yagn digunakan dan kita bisa simpulkan bahwa KNN atau K-Nearest Neighbors merupakan algortma paling optimal untuk model. 
+Kita bisa melihat akurasi dari setiap algortima yagn digunakan dan kita bisa simpulkan bahwa KNN atau Gradient Boost merupakan algortma paling optimal untuk model. 
 
 |index|Accuracy \(%\)|
 |---|---|
@@ -189,37 +189,12 @@ Kita bisa melihat akurasi dari setiap algortima yagn digunakan dan kita bisa sim
 |KNN|99\.64079455447617|
 |Gradient Boost|99\.74561188065324|
 
-
-
-Gambar 8. 
-
-Pada Gambar 8, Kita bisa melihat akurasi dari setiap algortima yagn digunakan dan kita bisa simpulkan bahwa KNN atau K-Nearest Neighbors merupakan algortma paling optimal untuk model. 
-
-Pada proyek ini semua model berjalan dengan sangat baik dan maksimal dan hanya terdapat selisih sangat kecil diantara ketiganya akan tetapi kita akan memilih model yang paling tinggi akurasinya, dimana K-Nearest Neighbors (KNN) adalah algortima yang memiliki nilai tertinggi.
+Pada proyek ini semua model berjalan dengan sangat baik dan maksimal dan hanya terdapat selisih sangat kecil diantara ketiganya akan tetapi kita akan memilih model yang paling tinggi akurasinya, alhasil Gradient Boost adalah algortima yang memiliki nilai tertinggi.
 
 ### Forecasting
-pada tahap ini saya akan mencoba memprediksi menggunakan algortma yang kita pili diatas yaitu KNN dalam kurun waktu 30 hari kedepan 
+Pada tahap ini saya akan mencoba memprediksi menggunakan algoritma yang kita pili diatas yaitu Gradient Boost dalam kurun waktu 30 hari kedepan.
+Berikut prediksi harga yang akan datang dalam kurun waktu 30 hari kedepan yang sudah diprediksi menggunakan Gradient Boost yang telah kita pilih sebagai algoritma yang paling optimal.
 
-![Prediksi](https://user-images.githubusercontent.com/73319544/191768702-9dc917e8-8ca1-4418-8552-129bba3524f8.png)
-
-Gambar 9. Prediksi model kurun waktu 30 hari
-
-Pada Gambar 9, Bisa kita lihat prediksi harga yang akan datang dalam kurun waktu 30 hari kedepan yang sudah diprediksi menggunakan KNN yang telah kita pilih sebagai algortima yang paling optimal.
-
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
-
-**---Ini adalah bagian akhir laporan---**
-
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
-
-berikut merupakan Visualisai dari hasil akurasi model :
-
-
-Forecasting
 |index|close|Forecast|
 |---|---|---|
 |2022-09-26 00:00:00|264\.0|NaN|
@@ -257,3 +232,15 @@ Forecasting
 |27|NaN|847\.0|
 |28|NaN|847\.0|
 |29|NaN|847\.0|
+
+
+### Referensi :
+* Adipta Martulandi(Oct 6, 2019).Tuning Hyperparameters Logistic Regression Menggunakan Grid Search #UcupStory, from https://medium.com/@adiptamartulandi/tuning-hyperparameters-logistic-regression-menggunakan-grid-search-ucupstory-fb1ab9db082a
+* Mekari (2022). Mengenal Metode Forecasting Untuk Kepentingan Bisnis Anda from https://www.jurnal.id/id/blog/mengenal-metode-forecasting-untuk-kepentingan-bisnis-anda/.
+* Fakultas Hukum Universitas Medan Area (June 15, 2020),Normalisasi Database from https://hukum.uma.ac.id/2022/06/15/normalisasi-database/#:~:text=Atau%20pengertian%20singkatny%2C%20Normalisasi%20Databse,database%20yang%20dibuat%20berkualitas%20baik.
+* Tom Sharp(Mar 4, 2020), An Introduction to Support Vector Regression (SVR) from https://towardsdatascience.com/an-introduction-to-support-vector-regression-svr-a3ebc1672c2
+* Abdul Muiz Khalimi(January, 2021) Cara Hitung RMSE , MSE, MAPE, dan MAE Dengan Excel from https://www.pengalaman-edukasi.com/2021/01/cara-menghitung-rmse-root-mean-square.html
+* ngodingdata, Python Pandas : Cara Menangani Missing Value, from https://ngodingdata.com/python-pandas-cara-menangani-missing-value/
+* GeeksForGeeks(2 Sep, 2020) ML – Gradient Boosting from https://www.geeksforgeeks.org/ml-gradient-boosting/
+* Lutfia Afifah, Algoritma K-Nearest Neighbor (KNN) untuk Klasifikasi from https://ilmudatapy.com/algoritma-k-nearest-neighbor-knn-untuk-klasifikasi/
+
