@@ -62,9 +62,9 @@ Solusi yang bisa dilakukan agar goals dapat terpenuhi sebagai berikut :
 Pada proyek ini saya mengambil dataset publik dari Kaggle yang berjudul Dataset Saham Indonesia / Indonesia Stock Dataset didalam dataset tersebut saya mengambil pada folder /daily/BBNI.csv 
 (https://www.kaggle.com/datasets/muamkh/ihsgstockdata/code).
 
-Dataset yang digunakan memiliki format .csv, mempunyai total 4431 data dengan 7 kolom diantaranya (Date, Open, High, Low, Close, Adj Close dan Volume), berikut merupakan penjelasan masing masing kolom:
-- **timestamp**: tanggal mulai dari open, low, high, close dan volume
-- **open** : opening price per day
+Dataset yang digunakan memiliki format .csv, mempunyai total 5600 data dengan 6 kolom diantaranya (timestamp, open, low, high, close dan volume), berikut merupakan penjelasan masing masing kolom:
+- **timestamp**: Tanggal mulai dari open, low, high, close dan volume
+- **open** : Opening price per day
 - **low** : Lowest price per day
 - **high** : Highest price per day
 - **close** : Closing price per day
@@ -76,7 +76,7 @@ Berikut adalah data seperti korelasi, outliner, dan analisis Univariate dan Mult
 - Menangani Outliner
 Dibawah ini adalah visualisasi dari data numerik yang menampilkan _outliner_ hanya pada fitur ***volume*** pada gambar 1.      
 ![outliner_before](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/before%20Outliner.png)
-
+before Outliner.png
   Gambar 1. Outliner before 
 
 Pada gambar 1, menampilkan _Outliner_ di kolom _volume_
@@ -178,7 +178,7 @@ Algoritma KNN merupakan algoritma klasifikasi yang bekerja dengan mengambil seju
 Untuk proyek kali ini kita akan menggunakan model K-Nearest Neighbors karena memiliki error (0.00001) yang paling sedikit daripada model yang lain. Namun tidak bisa dipungkiri model dari Gradient Boosting juga memiliki error (0.000011) yang hampir seperti KNN.
 
 ## Evaluation
-Pada tahap evaluasi ini metrik yang digunakan adalah Mean Squared Error (MSE), dimana dia akan mengukur seberapa dekat garis pas dengan titik pada data. 
+Pada tahap ini metrik yang digunakan adalah Mean Squared Error(MSE). MSE akan mengukur seberapa dekat garis yang pas dengan titik pada data. 
 
 MSE = $\sum {(Y^1 - Y)^2 \over n}$
 
@@ -187,7 +187,7 @@ Perhitungan dari MSE dimana penjelasan dari variablenya:
 - Y   = Nilai Sebenarnya
 - n   = Jumlah Data
 
-Berikut hasil dari MSE model bisa anda lihat di tabel 1.
+- Hasil dari MSE model bisa anda lihat di tabel 1.
 
 |index|train\_mse|test\_mse|
 |---|---|---|
@@ -198,7 +198,7 @@ Berikut hasil dari MSE model bisa anda lihat di tabel 1.
 Tabel 1. MSE model
 Dimana disitu menunjukan pada tabel 1 semakin kecil MSE yang diperoleh oleh model maka akan semakin optimal algortima yang digunakan.
 
-Plot Visualisasi MSE pada model
+- Plot Visualisasi MSE pada model
 Berikut hasil plot dari model terhadap beberapa algoritma yang digunakan.
 ![mse_plot](https://github.com/Cherzs/Predictive-Analytics/blob/87300f46f089ad222576eb4e58c1fe4299137b79/Image/MSE.png)
 
@@ -206,7 +206,7 @@ Berikut hasil plot dari model terhadap beberapa algoritma yang digunakan.
 
 Terlihat pada gambar 6 algoritma yang sangat cocok untuk digunakan adalah _Gradient Boosting, karena memiliki nilai MSE yang kecil
 
-Hasil akurasi MSE model bisa kita lihat di Tabel 2. 
+- Akurasi MSE model bisa kita lihat di Tabel 2. 
 
 |index|Accuracy \(%\)|
 |---|---|
