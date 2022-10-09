@@ -72,44 +72,58 @@ Dataset yang digunakan memiliki format .csv, mempunyai total 4431 data dengan 7 
 
 ### Eksploratory Data Analysis
 Berikut adalah data seperti korelasi, outliner, dan analisis Univariate dan Multivariate anailisis
+
 - Menangani Outliner
-Dibawah ini adalah visualisasi dari data numerik yang menampilkan outliner hanya pada fitur ***volume***.
-
+Dibawah ini adalah visualisasi dari data numerik yang menampilkan _outliner_ hanya pada fitur ***volume*** pada gambar 1.      
 ![outliner_before](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/before%20Outliner.png)
-Untuk menangani outlier dengan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR yaitu antara **25%** dan **75%**. Sampel data yang sudah clean adalah (4444, 5).
-Berikut proses penanganan outliner
 
+  Gambar 1. Outliner before 
+
+Pada gambar 1, menampilkan _Outliner_ di kolom _volume_
+
+- Penanangananan _Outlier_ bisa menggunakan _IQR Method_ pada gambar 2. 
 ![outliner_after](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/after%20Outliner.png)
 
-- Unvariate Analysis
-Kita fokus pada kolom close
+  Gambar 2. Outliner After
 
+Pada gambar 2 menghapus data yang berada diluar _IQR_ yaitu antara **25%** dan **75%**menunjukan hasuk yang sudah _clean_, kemudian Sampel data yang sudah _clean_ adalah (4444, 5).
+
+- Unvariate Analysis
+Kita fokus pada kolom close pada gambar 3.
 ![unvariate](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/U.png)
 
-- Multivariate Analysis
-Berikut adalah hasil dari multivariate analisis. Bisa kita lihat pada kolom Close dengan kolom lainya, bisa disimpulkan bahwa close memiliki korelasi yang cukup kuat terhadap kolom**High, Open, Low, dan Close**. Sementara Close terhadap kolom **Volume** memiliki korelasi yang kurang kuat. 
+  Gambar 3. Unvariate Analysis 
 
+- Multivariate Analysis
+Berikut adalah hasil dari _multivariate_ analisis pada gambar 4. 
 ![multivariate](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/M.png)
 
-- Korelasi Heatmap
-Untuk memperjelas korelasi kita menggunakan heatmap dengan menggunakan library Seaborn. Disini kolom Close memiliki korelasi positif yang kuat terhadap setiap fitur yang ditandakan dengan angka **1** yang berarti kuat dan bisa kita gunakan sebagai Dependent variable terkecuali pada fitur **Volume**.
+  Gambar 4. Multivariate Analysis
 
+Bisa kita lihat pada gambar 4 kolom Close dengan kolom lainnya, bisa disimpulkan bahwa _close_ memiliki korelasi yang cukup kuat terhadap kolom**High, Open, Low, dan Close**. Sementara _close_ terhadap kolom **Volume** memiliki korelasi yang kurang kuat. 
+
+- Korelasi Heatmap
+Untuk memperjelas korelasi kita menggunakan _heatmap_ dengan menggunakan _library Seaborn_ pada gambar 5. 
 ![heatmap](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/Heatm.png)
+
+  Gambar 5. Korelasi Heatmap
+
+Disini dalam gambar 5 kolom Close memiliki korelasi positif yang kuat terhadap setiap fitur yang ditandakan dengan angka **1** yang berarti kuat dan bisa kita gunakan sebagai _Dependent variable_ terkecuali pada fitur **Volume**.
 
 ## Data Preparation
 Tahap berikutnya dalam pemrosesan data:
 
 ### Melakukan Penanganan Missing Value
-Tahapan yang paling awal adalah menghilangkan Missing value pada dataset. Kebetulan dataset yang digunakan tidak memiliki nilai yang hilang/missing value. Namun jika anda memilki missing value, maka penanganan yang digunakan adalah menghapus atau mengisisi nilai hilang dengan nilai rata rata menggunakan library Simpleimputer.
+Tahapan yang paling awal adalah menghilangkan Missing value pada dataset. Kebetulan dataset yang digunakan tidak memiliki nilai yang hilang/missing value. Namun jika anda memilki missing value, maka penanganan yang digunakan adalah menghapus atau mengisisi nilai hilang dengan nilai rata rata menggunakan _library Simpleimputer_.
 
 ### Splitting dataset
-Pada tahap ini dataset yang tadi kita sudah diolah kemudian kita bagi menjadi data train dan data test. Dengan ratio yang bisa kita atur sendiri sesuai kebutuhan, ratio yang digunakan pada proyek ini sebesar **80:20**, dimana **80%** merupakan data train dan **20%** merupakan data test yang sudah dibagi menggunakan librari train_test_split dari Sklearn.
+Pada tahap ini dataset yang tadi kita sudah diolah kemudian kita bagi menjadi data train dan data test. Dengan ratio yang bisa kita atur sendiri sesuai kebutuhan, ratio yang digunakan pada proyek ini sebesar **80:20**, dimana **80%** merupakan data train dan **20%** merupakan data test yang sudah dibagi menggunakan librari _train_test_split_ dari _Sklearn_.
 
 ### Menghapus fitur yang tidak diperlukan 
 setelah diolah ternyata kita hanya memerlukan kolom **high, low, ope dan close**. Maka drop  kolom **Volume** untuk kasus ini.
 
 ### Normalization Data
-Pada tahap ini kita menggunakan MinMaxScaler supaya hasil yang maximal dan mentransformasi data dalam rentan angka **0** hingga **1**.
+Pada tahap ini kita menggunakan _MinMaxScaler_ supaya hasil yang maximal dan mentransformasi data dalam rentan angka **0** hingga **1**.
 
 ## Modeling
 Pada tahap ini kita menggunakan 3 algoritma  yaitu _Support Vector Regression, Gradient Boost dan KNN_.
@@ -166,14 +180,14 @@ Untuk proyek kali ini kita akan menggunakan model K-Nearest Neighbors karena mem
 ## Evaluation
 Pada tahap evaluasi ini metrik yang digunakan adalah Mean Squared Error (MSE), dimana dia akan mengukur seberapa dekat garis pas dengan titik pada data. 
 
-![mse_rumus](https://github.com/Cherzs/Predictive-Analytics/blob/87300f46f089ad222576eb4e58c1fe4299137b79/Image/Rumus%20MSE.jpg)
+MSE = $\sum {(Y^1 - Y)^2 \over n}$
 
 Perhitungan dari MSE dimana penjelasan dari variablenya:
 - Y ' = Nilai Prediksi 
 - Y   = Nilai Sebenarnya
 - n   = Jumlah Data
 
-Berikut hasil dari MSE model, dimana semakin kecil MSE yang diperoleh oleh model maka akan semakin optimal algortima yang digunakan.
+Berikut hasil dari MSE model bisa anda lihat di tabel 1.
 
 |index|train\_mse|test\_mse|
 |---|---|---|
@@ -181,13 +195,18 @@ Berikut hasil dari MSE model, dimana semakin kecil MSE yang diperoleh oleh model
 |KNN|16\.68136160714286|51\.30848214285714|
 |GradientBoosting|9\.669640985095231|36\.33649890753796|
 
-Plot Visualisasi MSE pada model
-Berikut hasil plot dari model terhadap beberapa algoritma yang digunakan, terlihat algoritma yang sangat cocok untuk digunakan adalah Gradient Boosting.
+Tabel 1. MSE model
+Dimana disitu menunjukan pada tabel 1 semakin kecil MSE yang diperoleh oleh model maka akan semakin optimal algortima yang digunakan.
 
+Plot Visualisasi MSE pada model
+Berikut hasil plot dari model terhadap beberapa algoritma yang digunakan.
 ![mse_plot](https://github.com/Cherzs/Predictive-Analytics/blob/87300f46f089ad222576eb4e58c1fe4299137b79/Image/MSE.png)
 
-Hasil akurasi MSE model
-Kita bisa melihat akurasi dari setiap algortima yagn digunakan dan kita bisa simpulkan bahwa KNN atau Gradient Boost merupakan algortma paling optimal untuk model. 
+  Gambar 6. Plot Visualisasi MSE
+
+Terlihat pada gambar 6 algoritma yang sangat cocok untuk digunakan adalah _Gradient Boosting, karena memiliki nilai MSE yang kecil
+
+Hasil akurasi MSE model bisa kita lihat di Tabel 2. 
 
 |index|Accuracy \(%\)|
 |---|---|
@@ -195,11 +214,15 @@ Kita bisa melihat akurasi dari setiap algortima yagn digunakan dan kita bisa sim
 |KNN|99\.64079455447617|
 |Gradient Boost|99\.74561188065324|
 
-Pada proyek ini semua model berjalan dengan sangat baik dan maksimal dan hanya terdapat selisih sangat kecil diantara ketiganya akan tetapi kita akan memilih model yang paling tinggi akurasinya, alhasil Gradient Boost adalah algortima yang memiliki nilai tertinggi.
+Tabel 2. Akurasi MSE model
+
+Pada Tabel 2 bahwa akurasi dari setiap algortima yagn digunakan dan kita bisa simpulkan bahwa Gradient Boost merupakan algortma paling optimal untuk model yang memiliki lebih dari akurasi 99%.
+
+Pada Predictive Analytics ini semua model berjalan dengan sangat baik dan maksimal dan hanya terdapat selisih sangat kecil diantara ketigaalgoritma yang digunakan. Namun disini kita akan memilih model yang paling tinggi akurasinya, Yaitu algoritma _Gradient Boost_,  yang memiliki nilai tertinggi.
 
 ### Forecasting
-Pada tahap ini saya akan mencoba memprediksi menggunakan algoritma yang kita pili diatas yaitu Gradient Boost dalam kurun waktu 30 hari kedepan.
-Berikut prediksi harga yang akan datang dalam kurun waktu 30 hari kedepan yang sudah diprediksi menggunakan Gradient Boost yang telah kita pilih sebagai algoritma yang paling optimal.
+Pada tahap ini saya akan mencoba memprediksi menggunakan algoritma yang kita pilih diatas yaitu Gradient Boost dalam kurun waktu 30 hari kedepan.
+Berikut prediksi harga yang akan datang dalam kurun waktu 30 hari kedepan pada Tabel 3.yang sudah diprediksi menggunakan Gradient Boost yang telah kita pilih sebagai algoritma yang paling optimal.
 
 |index|close|Forecast|
 |---|---|---|
@@ -239,6 +262,9 @@ Berikut prediksi harga yang akan datang dalam kurun waktu 30 hari kedepan yang s
 |28|NaN|847\.0|
 |29|NaN|847\.0|
 
+Tabel 3. Forecasting
+
+Pada tabel 3 sudah diprediksi menggunakan -Gradient Boost_ yang telah kita pilih sebagai algoritma yang paling optimal. Memiliki hasil prediksi untuk 30 hari kedepan
 
 ### Referensi :
 * Adipta Martulandi(Oct 6, 2019).Tuning Hyperparameters Logistic Regression Menggunakan Grid Search #UcupStory, from https://medium.com/@adiptamartulandi/tuning-hyperparameters-logistic-regression-menggunakan-grid-search-ucupstory-fb1ab9db082a
@@ -246,7 +272,6 @@ Berikut prediksi harga yang akan datang dalam kurun waktu 30 hari kedepan yang s
 * Fakultas Hukum Universitas Medan Area (June 15, 2020),Normalisasi Database from https://hukum.uma.ac.id/2022/06/15/normalisasi-database/#:~:text=Atau%20pengertian%20singkatny%2C%20Normalisasi%20Databse,database%20yang%20dibuat%20berkualitas%20baik.
 * Tom Sharp(Mar 4, 2020), An Introduction to Support Vector Regression (SVR) from https://towardsdatascience.com/an-introduction-to-support-vector-regression-svr-a3ebc1672c2
 * Abdul Muiz Khalimi(January, 2021) Cara Hitung RMSE , MSE, MAPE, dan MAE Dengan Excel from https://www.pengalaman-edukasi.com/2021/01/cara-menghitung-rmse-root-mean-square.html
-* ngodingdata, Python Pandas : Cara Menangani Missing Value, from https://ngodingdata.com/python-pandas-cara-menangani-missing-value/
 * GeeksForGeeks(2 Sep, 2020) ML – Gradient Boosting from https://www.geeksforgeeks.org/ml-gradient-boosting/
-* Lutfia Afifah, Algoritma K-Nearest Neighbor (KNN) untuk Klasifikasi from https://ilmudatapy.com/algoritma-k-nearest-neighbor-knn-untuk-klasifikasi/
+
 
