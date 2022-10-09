@@ -59,8 +59,8 @@ Solusi yang bisa dilakukan agar goals dapat terpenuhi sebagai berikut :
 * Seletah semua dilalui kita bisa menambahkan Hyperparameter tuning menggunakan teknik Grid Search agar model dapat berjalan dalam performa terbaik dan mendapatkan hasil yang terbaik pula.
 
 ## Data Understanding
-Pada proyek ini saya mengambil dataset publik dari Kaggle yang berjudul Dataset Saham Indonesia / Indonesia Stock Dataset didalam dataset tersebut saya mengambil pada folder /daily/BBNI.csv 
-(https://www.kaggle.com/datasets/muamkh/ihsgstockdata/code).
+Pada proyek ini saya mengambil dataset publik dari Kaggle yang berjudul Dataset Saham Indonesia Indonesia Stock Dataset, didalam dataset tersebut saya mengambil pada folder /daily/BBNI.csv 
+(https://www.kaggle.com/datasets/muamkh/ihsgstockdata).
 
 Dataset yang digunakan memiliki format .csv, mempunyai total 5600 data dengan 6 kolom diantaranya (timestamp, open, low, high, close dan volume), berikut merupakan penjelasan masing masing kolom:
 - **timestamp**: Tanggal mulai dari open, low, high, close dan volume
@@ -75,14 +75,14 @@ Berikut adalah data seperti korelasi, outliner, dan analisis Univariate dan Mult
 
 - Menangani Outliner
 Dibawah ini adalah visualisasi dari data numerik yang menampilkan _outliner_ hanya pada fitur ***volume*** pada gambar 1.      
-![outliner_before](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/before%20Outliner.png)
-before Outliner.png
+![before Outliner](https://user-images.githubusercontent.com/76243151/194744826-a1d83def-c6ea-4e86-8215-fcddcd964d07.png)
+
   Gambar 1. Outliner before 
 
 Pada gambar 1, menampilkan _Outliner_ di kolom _volume_
 
 - Penanangananan _Outlier_ bisa menggunakan _IQR Method_ pada gambar 2. 
-![outliner_after](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/after%20Outliner.png)
+![after Outliner](https://user-images.githubusercontent.com/76243151/194744833-5b656ba6-7295-4ab7-8e4b-ed219f086ede.png)
 
   Gambar 2. Outliner After
 
@@ -90,13 +90,13 @@ Pada gambar 2 menghapus data yang berada diluar _IQR_ yaitu antara **25%** dan *
 
 - Unvariate Analysis
 Kita fokus pada kolom close pada gambar 3.
-![unvariate](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/U.png)
+![U](https://user-images.githubusercontent.com/76243151/194744843-7533d009-43b3-4289-b74c-e7d1b640f149.png)
 
   Gambar 3. Unvariate Analysis 
 
 - Multivariate Analysis
 Berikut adalah hasil dari _multivariate_ analisis pada gambar 4. 
-![multivariate](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/M.png)
+![M](https://user-images.githubusercontent.com/76243151/194744856-37511b01-7495-4fb6-abd8-d82160d81d46.png)
 
   Gambar 4. Multivariate Analysis
 
@@ -104,7 +104,7 @@ Bisa kita lihat pada gambar 4 kolom Close dengan kolom lainnya, bisa disimpulkan
 
 - Korelasi Heatmap
 Untuk memperjelas korelasi kita menggunakan _heatmap_ dengan menggunakan _library Seaborn_ pada gambar 5. 
-![heatmap](https://github.com/Cherzs/Predictive-Analytics/blob/c95401a7c391a8921a0531ee5582aa3054303760/Image/Heatm.png)
+![Heatm](https://user-images.githubusercontent.com/76243151/194744863-330fd3fb-6a8a-46ab-a5a3-46bf56487e62.png)
 
   Gambar 5. Korelasi Heatmap
 
@@ -200,11 +200,11 @@ Dimana disitu menunjukan pada tabel 1 semakin kecil MSE yang diperoleh oleh mode
 
 - Plot Visualisasi MSE pada model
 Berikut hasil plot dari model terhadap beberapa algoritma yang digunakan.
-![mse_plot](https://github.com/Cherzs/Predictive-Analytics/blob/87300f46f089ad222576eb4e58c1fe4299137b79/Image/MSE.png)
+![MSE](https://user-images.githubusercontent.com/76243151/194744877-149efa1b-b568-48bf-911d-0114f691413d.png)
 
   Gambar 6. Plot Visualisasi MSE
 
-Terlihat pada gambar 6 algoritma yang sangat cocok untuk digunakan adalah _Gradient Boosting, karena memiliki nilai MSE yang kecil
+Terlihat pada gambar 6 algoritma yang sangat cocok untuk digunakan adalah _Gradient Boosting_, karena memiliki nilai MSE yang kecil
 
 - Akurasi MSE model bisa kita lihat di Tabel 2. 
 
@@ -216,7 +216,7 @@ Terlihat pada gambar 6 algoritma yang sangat cocok untuk digunakan adalah _Gradi
 
 Tabel 2. Akurasi MSE model
 
-Pada Tabel 2 bahwa akurasi dari setiap algortima yagn digunakan dan kita bisa simpulkan bahwa Gradient Boost merupakan algortma paling optimal untuk model yang memiliki lebih dari akurasi 99%.
+Pada Tabel 2 bahwa akurasi dari setiap algortima yagn digunakan dan kita bisa simpulkan bahwa _Gradient Boost_ merupakan algortma paling optimal untuk model yang memiliki lebih dari akurasi 99%.
 
 Pada Predictive Analytics ini semua model berjalan dengan sangat baik dan maksimal dan hanya terdapat selisih sangat kecil diantara ketigaalgoritma yang digunakan. Namun disini kita akan memilih model yang paling tinggi akurasinya, Yaitu algoritma _Gradient Boost_,  yang memiliki nilai tertinggi.
 
